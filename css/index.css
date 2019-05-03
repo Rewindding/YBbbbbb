@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#top,#header,#nav,#banner,#discription,#icons,#products,#news,#footer{
+    width: 100%;
+    height: 100px;
+    /* border: 1px solid; */
+}
+ol,ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.left{
+    float:left;
+}
+.right{
+    float: right;
+}
+.container{
+    margin: 0 auto;
+    width:1280px;
+    border:1px red solid;
+}
+
+#aside{
+    width:150px;
+    height: 150px;
+    background-image: url('../img/test4.png');
+    background-size: cover;
+    position: fixed;
+    bottom: 120px;
+
+}
+
+#top{
+    height: 3px;
+    background-color: orange;
+    /* position: fixed;
+    z-index: 10000; */
+}
+#header{
+    height: 40px;
+    background-color: rgb(214, 214, 214);
+    /* position: fixed;
+    z-index: 10000; */
+}
+#header-left{
+    margin-right: 30px;
+}
+#header-left a{
+    height:35px;
+    width:35px;
+    line-height: 40px;
+    background-size: cover;
+    float: left;
+    margin-right: 7px;
+    /* transform-style: preserve-3d; */
+    transition: 0.4s;
+}
+#header-left a:hover{
+    height:35px;
+    width:35px;
+    transform: rotateY(180deg);
+}
+#header #weibo{
+    background-image: url('../img/icons/weibo.png');
+    
+}
+#header #twitter{
+    background-image: url('../img/icons/twitter.png');
+}
+#header #qzone{
+    background-image: url('../img/icons/qzone.png');
+}
+#header #wechat{
+    background-image: url('../img/icons/wechat.png');
+}
+#header-right a{
+    float: left;
+    width: auto;
+    margin: 10px 10px;
+}
+#header-right li{
+    padding-right: 10px;
+    border-right: 1px solid black;
+}
+
+
+#nav .left-icon{
+    height: 86px;
+    width:172px;
+    background-image: url('../img/icon.png');
+    background-size: cover;
+    margin-top: 7px;
+}
+#nav a{
+    float: left;
+    width:auto;
+    height: 100px;
+    transition: 0.4s;
+}
+#nav a:hover{
+    color: rgb(255, 136, 0);
+    background-color: rgb(219, 219, 219);
+}
+#nav a:hover span{
+    color:rgb(255, 136, 0);
+}
+#nav ul li{
+    /* 想不到其他招了，先用padding居中吧... */
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+#nav span{
+    transition:0.4s;
+    color: grey;
+}
+#banner{
+    height:500px;
+    background-image: url('../img/test1.png');
+    background-size: cover;
+    animation: banner 20s infinite;
+}
+@keyframes banner{
+    20%{
+        background-image: url('../img/test1.png');
+    }
+    40%{
+        background-image: url('../img/test2.png');
+    }
+    60%{
+        background-image: url('../img/test3.png');
+    }
+    80%{
+        background-image: url('../img/test1.png');
+    }
+    100%{
+        background-image: url('../img/test2.png');
+    }
+}
+#discription{
+    background-color: rgb(238, 231, 231);
+    height: 80px;
+}
+#discription h2{
+    padding-top: 15px;
+text-align: center;
+}
+#discription p{
+    text-align: center;
+    color: grey;
+}
+#icons{
+    height: 540px;
+}
+div.window{
+    width: 400px;
+    height:250px;
+    border-radius: 25px;
+    margin:10px 13px;
+    overflow: hidden;
+    position: relative;
+    transition: 1.2s;
+}
+.window img{
+    width: inherit;
+    height:inherit;
+    transition: 1.6s;   
+}
+.window:hover img{
+    transform: scale(1.6,1.8);
+}
+.window:hover{
+    border-radius: 3px;
+}
+ul li{
+    float:left;
+}
+ul a{
+    width:inherit;
+    height: inherit;
+    text-decoration: none;
+}
+li a::before,li a:after {
+content:'';
+box-sizing: border-box;
+position: absolute;
+top: 5%;
+right: 5%;
+bottom: 5%;
+left:5%;
+transition:  0.8s ;
+z-index: 99;
+}
+.window a::before {border-top: 1.3px solid white;border-bottom: 1.3px solid white; transform: scale(0,1);}
+.window a::after {border-left: 1.3px solid white; border-right: 1.3px solid white; transform: scale(1,0); content:'';text-align:center;font-size: 30px;color:white;line-height: 100px;}
+.window a:hover::before{transform: scale(1,1); }
+.window a:hover::after { transform: scale(1,1); }
+.window a.one::after{content: '出行';}
+.window a.two::after{content: '易班xxxxx';}
+.window a.three::after{content: '易班xxxxx';}
+.window a.four::after{content: '出行'; }
+.window a.five::after{content: '易班xxxxx';}
+.window a.six::after{content: '易班xxxxx';}
+
+
+#news{
+    height: 280px;
+    background-image: url('../img/news.jpg');
+    background-size:cover;
+    background-position: 22px 748px;
+}
+#news #button{
+    height: 60px;
+    width: 200px;
+    border: 3px white solid;
+    border-radius: 18px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin: 110px auto;
+    transition: 0.2s;
+}
+#news a:hover #button{
+    transform: scale(1.1);
+   
+}
+#footer{
+    height: 320px;
+    background-color: rgb(29, 28, 28);
+}
+#footer .container .s1,.s2,.s3,.s4{
+    width: 300px;
+    float: left;
+}
+#footer .container #qrcode{
+    height: 150px;
+    width: 150px;
+    background-image: url('../img/qrcode.png');
+    display: block;
+    background-size: cover;
+    margin:15px auto;
+}
+#footer .download{
+    width: 90px;
+    height: 30px;
+    background-color: orange;
+    color: white;
+    border-radius: 15px;
+    margin: 10px 105px;
+    border-style: none;
+}
+#footer h4{
+    color:white;
+    
+    margin: 20px auto;
+}
+#footer a{
+    color:white;
+    display: block;
+    margin: 30px 0;
+}
+#footer .down{
+    width: 100%;
+    
+    float: left;
+
+}
+#footer .down ul {
+    width: 376px;
+    height: auto;
+    margin: 0 auto;
+}
+#footer .down ul li{
+    color: white;
+    border-right: 1.4px white solid;
+    padding: 2px 10px;
+}
